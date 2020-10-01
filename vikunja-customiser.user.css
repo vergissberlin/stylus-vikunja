@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Vikunja – Dark with user styles
+@name           Vikunja – Customiser
 @namespace      github.com/vergissberlin/vikunja-customiser
-@version        1.0.0
-@description    Vikunja design customiser
+@version        1.0.1
+@description    Vikunja design customiser for https://vikunja.io/ The to-do app to organize your life.
 @author         André Lademann
 @license 		MIT
 @preprocessor   default
@@ -89,8 +89,8 @@
 	.content h4,
 	.content h5,
 	.content h6,
-    .app-container .namespace-container .menu .menu-list a,
-    .switch-view a {
+	.app-container .namespace-container .menu .menu-list a,
+	.switch-view a {
 		color: #eee;
 	}
 
@@ -99,7 +99,6 @@
 	.app-container.has-background .namespace-container .menu .menu-list a {
 		color: #fff;
 	}
-
 
 	/* === Shadows === */
 	.app-container.has-background .namespace-container .menu .menu-list a,
