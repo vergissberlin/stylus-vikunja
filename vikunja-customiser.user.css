@@ -1,0 +1,155 @@
+/* ==UserStyle==
+@name           Vikunja – Dark with user styles
+@namespace      github.com/vergissberlin/vikunja-customiser
+@version        1.0.0
+@description    Vikunja design customiser
+@author         André Lademann
+@license 		MIT
+@preprocessor   default
+@homepageURL    https://github.com/vergissberlin/vikunja-customiser
+@supportURL     https://github.com/vergissberlin/vikunja-customiser/issues
+@updateURL      https://raw.githubusercontent.com/vergissberlin/vikunja-customiser/master/vikunja-customiser.user.css
+@var range 		blurness 			"Blurry background"     ['px', 5, 0, 42, 1]
+@var color    	color-darkness   	"Darkness color"   		rgb(24,35,43)
+@var select 	font-family-header 	"Font family header" 	{
+															  
+														  		"Quicksand": "Quicksand, sans-serif",
+																"American Typewriter": "American Typewriter, serif",
+															  	"Arial": "Arial, sans-serif",
+															  	"Arial Black": "Arial Black,Arial, sans-serif",
+															  	"Comic Sans": "Comic Sans MS, Comic Sans, serif",
+															  	"Courier": "Courier, sans-serif",
+															  	"Serif": "serif",
+															  	"Tahoma": "Tahoma, sans-serif",
+															  	"Trebuchet": "Trebuchet, sans-serif"
+															}
+@var select 	font-family-content "Font family content" 	{
+															  	"Open Sans": "Open Sans, Helvetica, Arial, sans-serif",
+															  	"Arial": "Arial, sans-serif",
+															  	"Serif": "serif",
+															  	"Trebuchet": "Trebuchet, sans-serif",
+															  	"Tahoma": "Tahoma, sans-serif"
+															}
+==/UserStyle== */
+@-moz-document url-prefix("http://tickets"),  
+                url-prefix("https://tickets"),
+                url-prefix("http://vikunja"),
+                url-prefix("https://vikunja"),
+                domain(try.vikunja.io) {
+	/* === Background colour === */
+	body {
+		background-color: var(--color-darkness);
+	}
+	.app-container.has-background .namespace-container,
+	.app-container .namespace-container,
+	.navbar.has-background,
+	.navbar.main-theme,
+	.kanban .bucket,
+	.switch-view,
+	.tasks .task {
+		background: rgba(33, 33, 44, 0.42);
+	}
+
+	.tasks .task:hover {
+		background: rgba(33, 33, 44, 0.8);
+	}
+
+	.app-container.has-background .tasks {
+		background: rgba(42, 42, 84, 0.1);
+	}
+
+	/* === Border colour === */
+	.tasks .task,
+	.tasks .task:hover {
+		border-color: rgba(33, 33, 44, 0.8);
+	}
+
+	/* === Background blur === */
+	.app-container.has-background .namespace-container,
+	.app-container .namespace-container,
+	.navbar.has-background,
+	.navbar.main-theme,
+	.tasks .task {
+		backdrop-filter: blur(var(--blurness));
+	}
+
+	/* === Text colour === */
+	.tasks .task span:not(.tag) a {
+		color: #ccc;
+	}
+	.tasks .task:hover a {
+		color: #eee;
+	}
+
+	.title,
+	.list-title .icon,
+	.content h1,
+	.content h2,
+	.content h3,
+	.content h4,
+	.content h5,
+	.content h6,
+    .app-container .namespace-container .menu .menu-list a,
+    .switch-view a {
+		color: #eee;
+	}
+
+	.has-background .title,
+	.has-background .list-title .icon,
+	.app-container.has-background .namespace-container .menu .menu-list a {
+		color: #fff;
+	}
+
+
+	/* === Shadows === */
+	.app-container.has-background .namespace-container .menu .menu-list a,
+	.button,
+	.button.is-success,
+	.box,
+	.card,
+	.has-background .list-title .icon,
+	.has-background .title,
+	.kanban .bucket .tasks .task,
+	.namespaces-list .namespace .lists .list,
+	.switch-view,
+	.router-link-exact-active.router-link-active.is-active {
+		box-shadow: 2px 2px 2px rgba(33, 33, 44, 0.2);
+	}
+
+	.kanban .bucket .tasks .task {
+		background: rgba(244, 244, 355, 0.8);
+	}
+
+	.app-container.has-background .kanban .tasks {
+		padding-top: 8px;
+	}
+
+	/* === Fonts === */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.app-container .namespace-container .menu .menu-label,
+	.app-container .namespace-container .top-menu .menu-list li,
+	.gantt-chart .dates .months .month,
+	.input.title,
+	.is-family-primary,
+	.is-family-secondary,
+	.is-family-sans-serif,
+	.namespaces-list .namespace .is-archived,
+	.navbar .user span {
+		font-family: var(--font-family-header);
+	}
+
+	body,
+	button,
+	input,
+	select,
+	textarea,
+	.kanban .bucket .tasks .task h3,
+	.namespaces-list .namespace .lists .list .title {
+		font-family: var(--font-family-content);
+	}
+}
