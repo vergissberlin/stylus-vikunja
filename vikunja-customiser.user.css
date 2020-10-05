@@ -10,7 +10,9 @@
 @supportURL     https://github.com/vergissberlin/vikunja-customiser/issues
 @updateURL      https://raw.githubusercontent.com/vergissberlin/vikunja-customiser/master/vikunja-customiser.user.css
 @var range 		blurness 			"Blurry background"     ['px', 5, 0, 42, 1]
-@var color    	color-darkness   	"Darkness color"   		rgb(24,35,43)
+@var color   	color-one   		"Colour one"   			rgb(24,35,43)
+@var color  	color-two   		"Colour two"   			rgb(222,222,222)
+@var color  	color-three   		"Colour three"   		rgb(180,200,195)
 @var select 	font-family-header 	"Font family header" 	{
 															  
 														  		"Quicksand": "Quicksand, sans-serif",
@@ -31,14 +33,34 @@
 															  	"Tahoma": "Tahoma, sans-serif"
 															}
 ==/UserStyle== */
-@-moz-document url-prefix("http://tickets"),  
-                url-prefix("https://tickets"),
-                url-prefix("http://vikunja"),
-                url-prefix("https://vikunja"),
-                domain(try.vikunja.io) {
+@-moz-document url-prefix("http://tickets"),
+url-prefix("https://tickets"),
+url-prefix("http://vikunja"),
+url-prefix("https://vikunja"),
+domain(try.vikunja.io) {
 	/* === Background colour === */
-	body {
-		background-color: var(--color-darkness);
+	html,
+	body,
+	.box,
+	.button,
+	.button.is-white,
+	.button.is-white[disabled],
+	fieldset[disabled] .button.is-white,
+	.button.is-white.is-outlined.is-focused,
+	.button.is-white.is-outlined.is-hovered,
+	.button.is-white.is-outlined:focus,
+	.button.is-white.is-outlined:hover,
+	.button.is-black.is-inverted,
+	.button.is-black.is-inverted[disabled],
+	fieldset[disabled] .button.is-black.is-inverted,
+	.button.is-black.is-loading:after,
+	.delete:after,
+	.delete:before,
+	.modal-close:after,
+	.modal-close:before,
+	.notification.is-white,
+	.progress.is-white::-webkit-progress-value {
+		background-color: var(--color-one);
 	}
 	.app-container.has-background .namespace-container,
 	.app-container .namespace-container,
@@ -74,15 +96,50 @@
 	}
 
 	/* === Text colour === */
-	.tasks .task span:not(.tag) a {
-		color: #ccc;
-	}
-	.tasks .task:hover a {
-		color: #eee;
-	}
-
+	a:hover,
+	.button,
+	strong,
+	.table,
+	.table th,
+	.table thead td,
+	.table thead th,
+	.table tfoot td,
+	.table tfoot th,
+	.content table th,
+	.title,
+	.subtitle strong,
+	.input,
+	.select select,
+	.textarea,
+	.checkbox:hover,
+	.radio:hover,
+	.select:not(.is-multiple):not(.is-loading):hover:after,
+	.file-label:hover .file-cta,
+	.file-label:active .file-cta,
+	.label,
+	.breadcrumb a:hover,
+	.breadcrumb li.is-active a,
+	.card-header-title,
+	.menu-list a:hover,
+	.modal-card-title,
+	.pagination-link,
+	.pagination-next,
+	.pagination-previous,
+	.pagination-link:hover,
+	.pagination-next:hover,
+	.pagination-previous:hover,
+	.panel-heading,
+	.panel-tabs a.is-active,
+	.panel-block,
+	.panel-block.is-active,
+	.tabs a:hover,
+	.has-text-grey-darker,
+	ul.teams li a,
+	.list-title .icon,
 	.title,
 	.list-title .icon,
+	.tasks .task:hover a,
+	.tasks .task span:not(.tag) a,
 	.content h1,
 	.content h2,
 	.content h3,
@@ -90,14 +147,20 @@
 	.content h5,
 	.content h6,
 	.app-container .namespace-container .menu .menu-list a,
-	.switch-view a {
-		color: #eee;
+	.switch-view a,
+	.app-container .namespace-container .menu .menu-list a .icon,
+	.app-container .namespace-container .menu .menu-label,
+	.content table thead td,
+	.content table thead th {
+		color: var(--color-two);
 	}
 
+	.tasks .task span:not(.tag).tasktext .task-list,
+	.tasks .task span:not(.tag) .tasktext .task-list,
 	.has-background .title,
 	.has-background .list-title .icon,
 	.app-container.has-background .namespace-container .menu .menu-list a {
-		color: #fff;
+		color: var(--color-three);
 	}
 
 	/* === Shadows === */
@@ -107,7 +170,6 @@
 	.box,
 	.card,
 	.has-background .list-title .icon,
-	.has-background .title,
 	.kanban .bucket .tasks .task,
 	.namespaces-list .namespace .lists .list,
 	.switch-view,
