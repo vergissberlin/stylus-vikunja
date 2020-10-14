@@ -1,4 +1,4 @@
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20%20with-Stylus-00adad.svg?style=for-the-badge&logo=stylus)](https://raw.githubusercontent.com/vergissberlin/vikunja-customiser/master/vikunja-customiser.user.css) [![Donate](https://img.shields.io/badge/Donate-PayPal-0070ba.svg?style=for-the-badge&logo=paypal)](https://paypal.me/vergissberlin)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20%20with-Stylus-00adad.svg?style=for-the-badge&logo=stylus)](https://raw.githubusercontent.com/vergissberlin/stylus-vikunja/master/stylus-vikunja.user.css) [![Donate](https://img.shields.io/badge/Donate-PayPal-0070ba.svg?style=for-the-badge&logo=paypal)](https://paypal.me/vergissberlin)
 
 > Dark theme for vikunja
 
@@ -6,7 +6,7 @@
 
 1. Install **Stylus Extension** [for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [for Firefox](https://addons.mozilla.org/fr/firefox/addon/styl-us/) or [for Opera](https://addons.opera.com/en-gb/extensions/details/stylus/)
 
-2. Install theme: [Click to install with Stylus](https://raw.githubusercontent.com/vergissberlin/vikunja-customiser/master/vikunja-customiser.user.css)
+2. Install theme: [Click to install with Stylus](https://raw.githubusercontent.com/vergissberlin/stylus-vikunja/master/stylus-vikunja.user.css)
 
 ---
 
